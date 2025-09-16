@@ -5,13 +5,11 @@ import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recha
 const nf = new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR" });
 const n2 = new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 2, minimumFractionDigits: 2 });
 
-const API_BASE = (() => {
-  try {
-    return (import.meta && import.meta.env && import.meta.env.VITE_API_BASE) || "http://localhost:4000";
-  } catch {
-    return "http://localhost:4000";
-  }
-})();
+const API_BASE =
+  (typeof window !== 'undefined' && window.APP_API_BASE) ||
+  (import.meta?.env?.VITE_API_BASE) ||
+  "";
+
 
 const PIE_COLORS = ["#0ea5e9", "#22c55e", "#f59e0b"];
 
