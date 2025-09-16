@@ -1,0 +1,4 @@
+# Simulateur de rentabilité
+
+- `docs/cahier-des-charges.md` : besoin fonctionnel et règles de gestion
+- `frontend/` : prototype UI React (App.jsx)
